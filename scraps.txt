@@ -1,0 +1,45 @@
+scraps.txt
+
+
+
+    public static void scraps() {
+
+        Novel n;
+        n = new Novel("Adventure", "Frank");
+        // n.setTitle("Adventure");
+        // n.author = "Frank";
+
+        Book b = new Book("The Cat in the Hat", "Seuss");
+
+        Textbook t = new Textbook();
+
+        library = new Library();
+        library.addBook(n);
+        library.addBook(b);
+        library.addBook(t);
+
+        library.printAllBooks();
+    }
+
+    public static void scraps2() {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+
+        list.add(1);
+        list.add(2);
+
+        for (Integer num : list) {
+            if (true) {
+                list.add(99);
+            }
+        }
+    }
+	
+	        ArrayList<Clown> list = new ArrayList<Clown>(0);
+
+        System.out.printf("list size=%d\n", list.size());
+
+        for (int i = 0; i <= list.size(); i++) {
+            System.out.printf("setting at i=%d\n", i);
+            list.set(i, new Clown());
+            System.out.printf("ok. List size now=%d\n", list.size());
+        }
