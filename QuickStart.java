@@ -3,19 +3,17 @@ import java.util.ArrayList;
 
 class Quickstart {
 
-    static Library library;
+    static ArrayList<Quadrangle> quads;
 
     public static void main(String[] args) {
         System.out.println("Hello, world!");
 
-        whatsIt(347);
-    }
+        quads = new ArrayList<Quadrangle>(10);
+        quads.add(new Rect());
 
-    public static void whatsIt(int n) {
-        if (n > 10)
-            whatsIt(n / 10);
-
-        System.out.print(n % 10);
+        for (Quadrangle q : quads) {
+            System.out.printf("Shape %s has area=%d\n", q.name, q.getArea());
+        }
     }
 
 }
