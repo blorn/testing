@@ -1,5 +1,15 @@
 scraps.txt
 
+    static ArrayList<Quadrangle> quads;
+    public static void playWithQuads() {
+
+        quads = new ArrayList<Quadrangle>(10);
+        // quads.add(new Rect());
+
+        for (Quadrangle q : quads) {
+            System.out.printf("Shape %s has area=%d\n", q.name, q.getArea());
+        }
+    }
 
 
     public static void scraps() {
@@ -43,3 +53,27 @@ scraps.txt
             list.set(i, new Clown());
             System.out.printf("ok. List size now=%d\n", list.size());
         }
+
+
+
+            public void paint(Graphics g) {
+        setBackground(Color.WHITE);
+        g.setColor(Color.BLACK);
+        g.drawString("Hello", 40, 40);
+
+        g.fillRect(130, 30, 100, 80);
+
+        // pi chart
+        g.drawOval(30, 130, 50, 60);
+        g.setColor(Color.GREEN);
+        g.fillArc(30, 130, 50, 60, 180, 40);
+
+        // circle
+        g.setColor(Color.RED);
+        g.fillOval(130, 130, 50, 60);
+
+        // arc
+        g.setColor(Color.BLUE);
+        g.drawArc(30, 200, 40, 50, 90, 60);
+
+    }
