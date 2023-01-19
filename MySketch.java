@@ -8,18 +8,20 @@ public class MySketch extends PApplet {
     public static long counter = 0;
 
     private Grid grid;
-    int gridWidth = 800;
-    int gridHeight = 800;
+    int gridWidth = 1500; // pixels
+    int gridHeight = 1000;
 
     public void settings() {
-        size(800, 900);
+        size(gridWidth, gridHeight);
         // balls.add(new Ball(this, width / 2, height / 2));
 
-        grid = new Grid(this, 150, 150, gridWidth, gridHeight);
+        grid = new Grid(this, 150, 100, gridWidth, gridHeight);
+
     }
 
     public void draw() {
         background(0);
+        noStroke();
 
         grid.step();
         grid.render();
@@ -29,8 +31,8 @@ public class MySketch extends PApplet {
             b.render();
         }
 
-        fill(100);
-        text(frameCount, 10, gridHeight + 20);
+        // fill(100);
+        // text(frameCount, 10, gridHeight + 20);
     }
 
     public void mouseClicked() {

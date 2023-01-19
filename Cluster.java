@@ -1,25 +1,26 @@
 import java.util.Random;
 
-import processing.core.PApplet;
-
 public class Cluster {
 
-    int rgb;
+    Color color;
     int size;
     static Random rand = new Random();
+    static String infinity = "∞";
 
     public Cluster() {
-        int r = rand.nextInt() * 255;
-        int g = rand.nextInt() * 255;
-        int b = rand.nextInt() * 255;
-
-        rgb = r << 16 + g << 8 + b;
+        color = Color.getRandomColor();
         size = 1;
     }
 
-    public int getColor() {
-        return rgb;
+    public Color getColor() {
+        return color;
     }
 
-    
+    public String getSizeString() {
+        if (size > 100000) {
+            return infinity;
+        } else
+            return String.valueOf(size);
+    }
+
 }
